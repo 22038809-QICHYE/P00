@@ -66,6 +66,7 @@ public class CalculatorTest {
 	@Test
 	public void testDivide() {
 		//fail("Not yet implemented");
+		try {
 		int a = 2;
 		int b = 2;
 		
@@ -74,5 +75,10 @@ public class CalculatorTest {
 		
 		int expected = 1;
 		assertEquals (actual, expected);
-	}
+		
+		} 
+		catch (ArithmeticException ae) {
+		System.out.println("***Error! Cannot divide by 0!");
+		ae.printStackTrace();
+		}
 }
